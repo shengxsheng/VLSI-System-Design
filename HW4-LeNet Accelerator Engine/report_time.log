@@ -1,0 +1,75 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : lenet
+Version: R-2020.09
+Date   : Tue May  7 21:12:55 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: PVT_1P08V_125C   Library: slow_vdd1v2
+Wire Load Model Mode: top
+
+  Startpoint: pe02/sum_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pool02/max_data_reg[24]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  pe02/sum_reg[3]/CK (DFFRHQX1)                         0.0000 #   0.0000 r
+  pe02/sum_reg[3]/Q (DFFRHQX1)                          0.1337     0.1337 r
+  pe02/sum[3] (pe_5)                                    0.0000     0.1337 r
+  pool02/data_in1[3] (maxpool_0)                        0.0000     0.1337 r
+  pool02/gt_1043/A[3] (maxpool_0_DW_cmp_2)              0.0000     0.1337 r
+  pool02/gt_1043/U127/Y (INVX1)                         0.0216     0.1553 f
+  pool02/gt_1043/U185/Y (AND2X1)                        0.0443     0.1996 f
+  pool02/gt_1043/U183/Y (OAI32X1)                       0.0682     0.2678 r
+  pool02/gt_1043/U126/Y (INVX1)                         0.0601     0.3280 f
+  pool02/gt_1043/U177/Y (AOI221X1)                      0.0778     0.4057 r
+  pool02/gt_1043/U176/Y (OAI211X1)                      0.0823     0.4880 f
+  pool02/gt_1043/U160/Y (AOI32X1)                       0.0786     0.5666 r
+  pool02/gt_1043/U124/Y (NAND4XL)                       0.1045     0.6712 f
+  pool02/gt_1043/U156/Y (OAI2BB1X1)                     0.0608     0.7320 r
+  pool02/gt_1043/GE_LT_GT_LE (maxpool_0_DW_cmp_2)       0.0000     0.7320 r
+  pool02/U6/Y (INVX1)                                   0.0311     0.7631 f
+  pool02/U4/Y (INVX2)                                   0.0490     0.8121 r
+  pool02/U16/Y (MX2XL)                                  0.0850     0.8971 r
+  pool02/gt_1051/A[3] (maxpool_0_DW_cmp_0)              0.0000     0.8971 r
+  pool02/gt_1051/U131/Y (INVX1)                         0.0219     0.9190 f
+  pool02/gt_1051/U185/Y (AND2X1)                        0.0443     0.9633 f
+  pool02/gt_1051/U183/Y (OAI32X1)                       0.0682     1.0315 r
+  pool02/gt_1051/U130/Y (INVX1)                         0.0603     1.0918 f
+  pool02/gt_1051/U178/Y (AOI221X1)                      0.0778     1.1696 r
+  pool02/gt_1051/U177/Y (OAI211X1)                      0.0823     1.2519 f
+  pool02/gt_1051/U159/Y (AOI32X1)                       0.0815     1.3334 r
+  pool02/gt_1051/U124/Y (NAND4X1)                       0.0926     1.4260 f
+  pool02/gt_1051/U155/Y (OAI2BB1X1)                     0.0524     1.4784 r
+  pool02/gt_1051/GE_LT_GT_LE (maxpool_0_DW_cmp_0)       0.0000     1.4784 r
+  pool02/U5/Y (INVX1)                                   0.0268     1.5052 f
+  pool02/U8/Y (INVX1)                                   0.0801     1.5852 r
+  pool02/U12/Y (OAI22XL)                                0.1170     1.7022 f
+  pool02/max_data_reg[24]/D (DFFRHQX1)                  0.0000     1.7022 f
+  data arrival time                                                1.7022
+
+  clock clk (rise edge)                                 1.7500     1.7500
+  clock network delay (ideal)                           0.0000     1.7500
+  pool02/max_data_reg[24]/CK (DFFRHQX1)                 0.0000     1.7500 r
+  library setup time                                   -0.0476     1.7024
+  data required time                                               1.7024
+  --------------------------------------------------------------------------
+  data required time                                               1.7024
+  data arrival time                                               -1.7022
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0001
+
+
+1

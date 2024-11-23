@@ -1,0 +1,121 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : bert_encoder
+Version: R-2020.09
+Date   : Sun Jun 23 19:14:19 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: PVT_1P08V_125C   Library: slow_vdd1v2
+Wire Load Model Mode: top
+
+  Startpoint: state_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pe0/sum_reg[21]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  state_reg[2]/CK (DFFRHQX1)                            0.0000 #   0.0000 r
+  state_reg[2]/Q (DFFRHQX1)                             0.1366     0.1366 r
+  U14475/Y (INVX1)                                      0.0225     0.1591 f
+  U14474/Y (NOR2BXL)                                    0.0351     0.1942 f
+  U14473/Y (NOR3XL)                                     0.0361     0.2303 r
+  U14476/Y (OR2XL)                                      0.0453     0.2756 r
+  U14481/Y (OR3XL)                                      0.0547     0.3303 r
+  U14478/Y (NAND2X2)                                    0.0381     0.3683 f
+  U14274/Y (BUFX2)                                      0.0568     0.4251 f
+  U14523/Y (INVX3)                                      0.0207     0.4458 r
+  U15229/Y (NAND2X1)                                    0.0355     0.4813 f
+  U16962/Y (INVX1)                                      0.0316     0.5128 r
+  pe0/act[23] (pe_1)                                    0.0000     0.5128 r
+  pe0/mult_2543/a[7] (pe_1_DW_mult_tc_27)               0.0000     0.5128 r
+  pe0/mult_2543/U260/Y (INVX2)                          0.0264     0.5393 f
+  pe0/mult_2543/U258/Y (OR2XL)                          0.0591     0.5984 f
+  pe0/mult_2543/U442/CO (ADDFXL)                        0.0960     0.6944 f
+  pe0/mult_2543/U345/CO (ADDFXL)                        0.0928     0.7872 f
+  pe0/mult_2543/U252/S (ADDFXL)                         0.1419     0.9291 r
+  pe0/mult_2543/U251/S (ADDFXL)                         0.1360     1.0652 f
+  pe0/mult_2543/U383/Y (NAND2XL)                        0.0305     1.0957 r
+  pe0/mult_2543/U361/Y (OAI21X1)                        0.0520     1.1476 f
+  pe0/mult_2543/U360/Y (AOI21X2)                        0.0489     1.1966 r
+  pe0/mult_2543/U473/Y (OAI21XL)                        0.0562     1.2528 f
+  pe0/mult_2543/U253/Y (XNOR2X1)                        0.0990     1.3518 r
+  pe0/mult_2543/product[11] (pe_1_DW_mult_tc_27)        0.0000     1.3518 r
+  pe0/add_2571_2/A[11] (pe_1_DW01_add_53)               0.0000     1.3518 r
+  pe0/add_2571_2/U141/Y (NAND2X1)                       0.0424     1.3943 f
+  pe0/add_2571_2/U140/Y (NAND2XL)                       0.0330     1.4273 r
+  pe0/add_2571_2/U139/Y (XNOR2XL)                       0.0979     1.5251 f
+  pe0/add_2571_2/SUM[11] (pe_1_DW01_add_53)             0.0000     1.5251 f
+  pe0/add_2571_3/B[11] (pe_1_DW01_add_45)               0.0000     1.5251 f
+  pe0/add_2571_3/U137/Y (NOR2X1)                        0.0324     1.5576 r
+  pe0/add_2571_3/U136/Y (OA21XL)                        0.0696     1.6272 r
+  pe0/add_2571_3/U139/Y (OAI2BB1X1)                     0.0428     1.6700 f
+  pe0/add_2571_3/U142/Y (XNOR2XL)                       0.0913     1.7613 r
+  pe0/add_2571_3/SUM[12] (pe_1_DW01_add_45)             0.0000     1.7613 r
+  pe0/add_1_root_add_2571_7/A[12] (pe_1_DW01_add_50)    0.0000     1.7613 r
+  pe0/add_1_root_add_2571_7/U148/Y (NOR2X1)             0.0284     1.7897 f
+  pe0/add_1_root_add_2571_7/U147/Y (INVX1)              0.0193     1.8090 r
+  pe0/add_1_root_add_2571_7/U149/Y (NAND2X1)            0.0262     1.8352 f
+  pe0/add_1_root_add_2571_7/U151/Y (XNOR2XL)            0.1048     1.9400 r
+  pe0/add_1_root_add_2571_7/SUM[12] (pe_1_DW01_add_50)
+                                                        0.0000     1.9400 r
+  pe0/add_0_root_add_2571_7/B[12] (pe_1_DW01_add_26)    0.0000     1.9400 r
+  pe0/add_0_root_add_2571_7/U156/Y (OR2XL)              0.0445     1.9845 r
+  pe0/add_0_root_add_2571_7/U144/Y (AOI21X2)            0.0488     2.0333 f
+  pe0/add_0_root_add_2571_7/U152/Y (OAI21X1)            0.0418     2.0751 r
+  pe0/add_0_root_add_2571_7/U155/Y (OAI2BB1X1)          0.0765     2.1515 r
+  pe0/add_0_root_add_2571_7/U161/Y (AOI21X2)            0.0464     2.1979 f
+  pe0/add_0_root_add_2571_7/U166/Y (OAI21X1)            0.0442     2.2421 r
+  pe0/add_0_root_add_2571_7/U176/Y (AOI21X1)            0.0516     2.2937 f
+  pe0/add_0_root_add_2571_7/U171/Y (XOR2XL)             0.0658     2.3595 f
+  pe0/add_0_root_add_2571_7/SUM[18] (pe_1_DW01_add_26)
+                                                        0.0000     2.3595 f
+  pe0/add_2_root_add_2571_16/A[18] (pe_1_DW01_add_25)   0.0000     2.3595 f
+  pe0/add_2_root_add_2571_16/U160/Y (NOR2X1)            0.0383     2.3978 r
+  pe0/add_2_root_add_2571_16/U158/Y (OAI21X1)           0.0480     2.4458 f
+  pe0/add_2_root_add_2571_16/U162/Y (AOI21X1)           0.0450     2.4907 r
+  pe0/add_2_root_add_2571_16/U165/Y (XNOR2X1)           0.0840     2.5747 f
+  pe0/add_2_root_add_2571_16/SUM[19] (pe_1_DW01_add_25)
+                                                        0.0000     2.5747 f
+  pe0/add_0_root_add_0_root_add_2571_16/A[19] (pe_1_DW01_add_42)
+                                                        0.0000     2.5747 f
+  pe0/add_0_root_add_0_root_add_2571_16/U200/Y (NOR2X2)
+                                                        0.0335     2.6083 r
+  pe0/add_0_root_add_0_root_add_2571_16/U202/Y (OAI21X2)
+                                                        0.0433     2.6516 f
+  pe0/add_0_root_add_0_root_add_2571_16/U197/Y (AOI21X2)
+                                                        0.0438     2.6954 r
+  pe0/add_0_root_add_0_root_add_2571_16/U211/Y (OAI21XL)
+                                                        0.0552     2.7506 f
+  pe0/add_0_root_add_0_root_add_2571_16/U206/Y (XNOR2XL)
+                                                        0.0857     2.8364 r
+  pe0/add_0_root_add_0_root_add_2571_16/SUM[21] (pe_1_DW01_add_42)
+                                                        0.0000     2.8364 r
+  pe0/U5/Y (NOR2BXL)                                    0.0447     2.8810 r
+  pe0/U37/Y (NOR2BX1)                                   0.0544     2.9354 r
+  pe0/sum_reg[21]/D (DFFRHQX1)                          0.0000     2.9354 r
+  data arrival time                                                2.9354
+
+  clock clk (rise edge)                                 3.0000     3.0000
+  clock network delay (ideal)                           0.0000     3.0000
+  pe0/sum_reg[21]/CK (DFFRHQX1)                         0.0000     3.0000 r
+  library setup time                                   -0.0645     2.9355
+  data required time                                               2.9355
+  --------------------------------------------------------------------------
+  data required time                                               2.9355
+  data arrival time                                               -2.9354
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0001
+
+
+1

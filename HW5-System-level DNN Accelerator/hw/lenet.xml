@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sld>
+  <accelerator name="lenet" desc="Accelerator LENET" data_size="4" device_id="058" hls_tool="rtl">
+    <param name="scale_FC1" desc="scale_FC1" />
+    <param name="scale_FC2" desc="scale_FC2" />
+    <param name="scale_CONV1" desc="scale_CONV1" />
+    <param name="scale_CONV3" desc="scale_CONV3" />
+    <param name="scale_CONV2" desc="scale_CONV2" />
+  </accelerator>
+</sld>

@@ -1,0 +1,38 @@
+****************************************
+Report : Time Based Power
+Design : lenet
+Version: U-2022.12
+Date   : Mon May 27 19:55:03 2024
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network           6.200e-04 1.054e-04 1.588e-08 7.254e-04 (57.71%)  i
+register                7.276e-05 2.531e-05 3.764e-07 9.845e-05 ( 7.83%)  
+combinational           2.367e-04 1.954e-04 1.047e-06 4.331e-04 (34.46%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 3.261e-04   (25.94%)
+  Cell Internal Power  = 9.294e-04   (73.94%)
+  Cell Leakage Power   = 1.439e-06   ( 0.11%)
+                         ---------
+Total Power            = 1.257e-03  (100.00%)
+
+X Transition Power     = 7.280e-07
+Glitching Power        = 7.306e-07
+
+Peak Power             =    0.0923
+Peak Time              = 35826.090
+
+1
